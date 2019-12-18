@@ -10,18 +10,18 @@ export default class HeaderLanding extends Component {
   render () {
     return (
       <Container>
-        <Header>
+        <Header style={styles.header}>
             <Left>
                 <Button transparent onPress={()=> alert("Menu button pressed!")}>
-                    <Icon name="menu"/>
+                    <Icon name="menu" style={styles.icon}/>
                 </Button>
             </Left>
             <Body>
-                <Text>BBQ</Text>
+                <Text style={styles.title}>BBQ</Text>
             </Body>
             <Right>
                 <Button transparent onPress={()=> alert("Checkout button pressed!")}>
-                    <Icon type="FontAwesome5" name="shopping-cart"/> 
+                    <Icon type="FontAwesome5" name="shopping-cart" style={styles.icon}/> 
                 </Button>
             </Right>
         </Header>
