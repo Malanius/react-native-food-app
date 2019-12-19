@@ -16,7 +16,7 @@ export default class FoodItem extends Component {
                         blurRadius={3} />
                 </View>
                 <View style={styles.textView}>
-                    <TouchableOpacity onPress={() => alert(this.props.text)}>
+                    <TouchableOpacity onPress={() => this.props.navigate('FoodScreen')}>
                         <Text style={styles.text}>{this.props.text}</Text>
                     </TouchableOpacity>
                 </View>

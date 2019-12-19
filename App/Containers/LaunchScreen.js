@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { ScrollView, Text, Image, View } from 'react-native'
 import { Images } from '../Themes'
 
-import HeaderLanding from '../Components/Header'
+import HeaderLanding from '../Components/HeaderMain'
 import FoodItem from '../Components/FoodItem'
 
 // Styles
@@ -15,13 +15,14 @@ const pizzaImage = require('../Images/food/pizza.jpg')
 
 export default class LaunchScreen extends Component {
   render() {
+    const { navigate } = this.props.navigation
     return (
       <View style={styles.mainContainer}>
         <HeaderLanding />
         <ScrollView style={styles.scroll}>
-          <FoodItem image={burgerImage} text="BURGERS"/>
-          <FoodItem image={chickenImage} text="CHICKEN"/>
-          <FoodItem image={pizzaImage} text="PIZZA"/>
+          <FoodItem image={burgerImage} text="BURGERS" navigate={navigate} />
+          <FoodItem image={chickenImage} text="CHICKEN" navigate={navigate}/>
+          <FoodItem image={pizzaImage} text="PIZZA" navigate={navigate}/>
         </ScrollView>
       </View>
     )
