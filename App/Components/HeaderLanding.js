@@ -9,7 +9,7 @@ import styles from './Styles/HeaderScreenStyles'
 export default class HeaderLanding extends Component {
   render () {
     return (
-      <Container>
+      <Container style={styles.container}>
         <Header style={styles.header}>
             <Left>
                 <Button transparent onPress={()=> alert("Menu button pressed!")}>

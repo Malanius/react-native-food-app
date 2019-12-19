@@ -2,6 +2,11 @@ import { StyleSheet } from 'react-native'
 import { Fonts, Colors } from '../../Themes/'
 
 export default StyleSheet.create({
+    container: {
+        height: '10%',
+        flex: 0,
+        zIndex: 5
+    },
     header:{
         backgroundColor: 'orange'
     },
@@ -12,7 +17,6 @@ export default StyleSheet.create({
     title:{
         color: 'white',
         fontSize: 25,
-        fontWeight: '800',
-        
+        fontWeight: '800'        
     }
 })

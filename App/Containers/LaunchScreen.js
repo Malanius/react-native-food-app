@@ -3,15 +3,17 @@ import { ScrollView, Text, Image, View } from 'react-native'
 import { Images } from '../Themes'
 
 import HeaderLanding from '../Components/HeaderLanding'
+import FoodItem from '../Components/FoodItem'
 
 // Styles
 import styles from './Styles/LaunchScreenStyles'
 
 export default class LaunchScreen extends Component {
-  render () {
+  render() {
     return (
       <View style={styles.mainContainer}>
-        <HeaderLanding/>
+        <HeaderLanding />
+        <FoodItem />
       </View>
     )
   }
