@@ -1,22 +1,25 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Platform } from 'react-native'
 import { Fonts, Colors } from '../../Themes/'
 
 export default StyleSheet.create({
     container: {
-        height: '10%',
+        height: Platform.OS === 'ios' ? '10%' : '8%',
         flex: 0,
         zIndex: 5
     },
-    header:{
+    header: {
         backgroundColor: 'orange'
+    },
+    body: {
     },
     icon: {
         color: 'white',
         fontSize: 30
     },
-    title:{
+    title: {
         color: 'white',
         fontSize: 25,
-        fontWeight: '800'        
+        fontWeight: '800',
+        textAlign: 'center'
     }
 })

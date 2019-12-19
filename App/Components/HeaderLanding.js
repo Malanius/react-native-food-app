@@ -16,7 +16,7 @@ export default class HeaderLanding extends Component {
                     <Icon name="menu" style={styles.icon}/>
                 </Button>
             </Left>
-            <Body>
+            <Body style={styles.body}>
                 <Text style={styles.title}>BBQ</Text>
             </Body>
             <Right>
