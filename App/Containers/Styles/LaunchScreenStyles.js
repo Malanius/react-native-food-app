@@ -14,5 +14,8 @@ export default StyleSheet.create({
   },
   centered: {
     alignItems: 'center'
+  },
+  scroll: {
+    backgroundColor: 'orange'
   }
 })

@@ -1,25 +1,27 @@
 import React, { Component } from 'react'
-import { View, Image, Text } from 'react-native'
+import { View, Image, Text, TouchableOpacity } from 'react-native'
 
 // Styles
 import styles from './Styles/FoodItemStyles'
 
-const burgerImage = require('../Images/burger.jpg')
-
 export default class FoodItem extends Component {
     render() {
         return (
+
             <View style={styles.foodCard}>
                 <View>
                     <Image style={styles.foodImage}
-                        source={burgerImage}
+                        source={this.props.image}
                         resizeMode={'contain'}
                         blurRadius={3} />
                 </View>
                 <View style={styles.textView}>
-                    <Text style={styles.text}>BURGERS</Text>
+                    <TouchableOpacity onPress={() => alert(this.props.text)}>
+                        <Text style={styles.text}>{this.props.text}</Text>
+                    </TouchableOpacity>
                 </View>
             </View>
+
         )
     }
 }

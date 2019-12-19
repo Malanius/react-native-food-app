@@ -3,7 +3,7 @@ import { ScrollView, Text, Image, View } from 'react-native'
 import { Container, Header, Left, Body, Right, Button, Icon } from 'native-base'
 
 // Styles
-import styles from './Styles/HeaderScreenStyles'
+import styles from './Styles/HeaderStyles'
 
 
 export default class HeaderLanding extends Component {
