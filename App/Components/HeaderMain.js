@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { ScrollView, Text, Image, View } from 'react-native'
+import React from 'react'
+import { Text } from 'react-native'
 import { Container, Header, Left, Body, Right, Button, Icon } from 'native-base'
 
 // Styles

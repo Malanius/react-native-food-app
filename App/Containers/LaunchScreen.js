@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { ScrollView, Text, Image, View } from 'react-native'
-import { Images } from '../Themes'
+import { ScrollView, View } from 'react-native'
 
 import HeaderLanding from '../Components/HeaderMain'
 import FoodItem from '../Components/FoodItem'
