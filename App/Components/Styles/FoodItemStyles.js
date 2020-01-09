@@ -7,7 +7,8 @@ export default StyleSheet.create({
     foodItemView: {
         width: '100%',
         height: height / 4,
-        padding: '5%',
+        paddingLeft: '5%',
+        paddingRight: '5%'
     },
     price: {
         backgroundColor: '#8DBA25',

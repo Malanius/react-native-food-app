@@ -13,6 +13,7 @@ const chickenImage = require('../Images/food/chicken.jpg')
 const pizzaImage = require('../Images/food/pizza.jpg')
 
 export default class LaunchScreen extends Component {
+
   render() {
     const { navigate } = this.props.navigation
     return (
@@ -20,8 +21,8 @@ export default class LaunchScreen extends Component {
         <HeaderLanding />
         <ScrollView style={styles.scroll}>
           <FoodGroup image={burgerImage} text="BURGERS" navigate={navigate} />
-          <FoodGroup image={chickenImage} text="CHICKEN" navigate={navigate}/>
-          <FoodGroup image={pizzaImage} text="PIZZA" navigate={navigate}/>
+          <FoodGroup image={chickenImage} text="CHICKEN" navigate={navigate} />
+          <FoodGroup image={pizzaImage} text="PIZZA" navigate={navigate} />
         </ScrollView>
       </View>
     )

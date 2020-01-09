@@ -12,17 +12,17 @@ const foodItem = (props) => (
     <TouchableOpacity onPress={() => alert("Food item pressed.")}>
         <View style={styles.foodItemView}>
             <View style={styles.price}>
-                <Text style={styles.priceText}>$10</Text>
+                <Text style={styles.priceText}>{props.price}</Text>
             </View>
 
             <View style={styles.imageView}>
-                <Image style={styles.foodImage} source={burger} resizeMode="cover" />
+                <Image style={styles.foodImage} source={props.image} resizeMode="cover" />
             </View>
 
             <View style={styles.description}>
                 <View style={styles.descritptionText}>
-                    <Text style={styles.foodTitle}>Title</Text>
-                    <Text style={styles.foodBody}>Food item description text goes here</Text>
+                    <Text style={styles.foodTitle}>{props.title}</Text>
+                    <Text style={styles.foodBody}>{props.description}</Text>
                 </View>
             </View>
         </View>

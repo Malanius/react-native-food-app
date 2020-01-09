@@ -13,7 +13,15 @@ const foodScreen = (props) => (
         <HeaderFood navigate={props.navigation} />
         <Content style={styles.content}>
             <Text style={styles.title}>{props.navigation.getParam('title', '')}</Text>
-            <FoodItem />
+            {props.navigation.getParam('items', []).map(item => (
+                <FoodItem
+                    key={item.title}
+                    price={item.price}
+                    title={item.title}
+                    description={item.description}
+                    image={item.image}
+                />
+            ))}
         </Content>
     </Container>
 
