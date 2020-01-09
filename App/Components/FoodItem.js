@@ -14,7 +14,9 @@ const foodItem = (props) => (
                 blurRadius={3} />
         </View>
         <View style={styles.textView}>
-            <TouchableOpacity onPress={() => props.navigate('FoodScreen')}>
+            <TouchableOpacity onPress={() => props.navigate('FoodScreen', {
+                title: props.text
+            })}>
                 <Text style={styles.text}>{props.text}</Text>
             </TouchableOpacity>
         </View>
