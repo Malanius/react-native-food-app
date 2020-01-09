@@ -2,9 +2,9 @@ import React from 'react'
 import { View, Image, Text, TouchableOpacity } from 'react-native'
 
 // Styles
-import styles from './Styles/FoodItemStyles'
+import styles from './Styles/FoodGroupStyles'
 
-const foodItem = (props) => (
+const foodGroup = (props) => (
 
     <View style={styles.foodCard}>
         <View>
@@ -24,4 +24,4 @@ const foodItem = (props) => (
 
 )
 
-export default foodItem;
+export default foodGroup;
