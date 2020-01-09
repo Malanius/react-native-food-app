@@ -5,12 +5,12 @@ import { Container, Header, Left, Body, Right, Button, Icon } from 'native-base'
 // Styles
 import styles from './Styles/HeaderMainStyles'
 
-const headerFood = () => (
+const headerFood = (props) => (
 
   <Container style={styles.container}>
     <Header style={styles.header}>
       <Left>
-        <Button transparent onPress={() => alert("Back button pressed!")}>
+        <Button transparent onPress={() => props.navigate.goBack()}>
           <Icon name="md-arrow-back" style={styles.icon} />
         </Button>
       </Left>

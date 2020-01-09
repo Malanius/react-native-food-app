@@ -2,11 +2,12 @@ import React from 'react'
 import { View } from 'react-native'
 
 import HeaderFood from '../Components/HeaderFood'
+import styles from './Styles/LaunchScreenStyles'
 
-const foodScreen = () => (
+const foodScreen = (props) => (
 
-    <View>
-        <HeaderFood />
+    <View style={styles.mainContainer}>
+        <HeaderFood navigate={props.navigation} />
     </View>
 
 )
