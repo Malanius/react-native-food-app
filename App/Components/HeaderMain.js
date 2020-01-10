@@ -5,12 +5,12 @@ import { Container, Header, Left, Body, Right, Button, Icon } from 'native-base'
 // Styles
 import styles from './Styles/HeaderMainStyles'
 
-const headerLanding = () => (
+const headerLanding = (props) => (
 
   <Container style={styles.container}>
     <Header style={styles.header}>
       <Left>
-        <Button transparent onPress={() => alert("Menu button pressed!")}>
+        <Button transparent onPress={props.openDrawer}>
           <Icon name="menu" style={styles.icon} />
         </Button>
       </Left>
