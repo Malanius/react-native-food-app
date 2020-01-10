@@ -1,6 +1,8 @@
 import { StyleSheet, Dimensions } from 'react-native'
 
 let height = Dimensions.get('window').height;
+let width = Dimensions.get('window').width;
+let scale = height/width;
 
 export default StyleSheet.create({
 
@@ -62,6 +64,6 @@ export default StyleSheet.create({
         textAlign: 'center',
         fontWeight: '400',
         paddingTop: 5,
-        fontSize: 16
+        fontSize: scale * 7
     }
 })
