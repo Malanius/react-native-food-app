@@ -2,6 +2,9 @@ import BurgerImage from '../Images/food/burger.jpg'
 import ChickenImage from '../Images/food/chicken.jpg'
 import PizzaImage from '../Images/food/pizza.jpg'
 
+import ColdDrinkImage from '../Images/drinks/cold-drink.jpg'
+import CoffeeImage from '../Images/drinks/coffee.jpg'
+
 export const burgers = [
     {
         title: "Regural burger",
@@ -81,4 +84,52 @@ export const pizza = [
         price: "$3.5",
         image: PizzaImage
     }     
+]
+
+export const coldDrinks = [
+    {
+        title: "Cola",
+        description: "Drink black almost like a black hole.",
+        price: "$2",
+        image: ColdDrinkImage
+    },
+    {
+        title: "Fanta",
+        description: "No drink glues better",
+        price: "$2",
+        image: ColdDrinkImage
+    },
+    {
+        title: "Sprite",
+        description: "To defeat your thirst",
+        price: "$2",
+        image: ColdDrinkImage
+    },
+    {
+        title: "Water",
+        description: "For those old schoolers",
+        price: "$1",
+        image: ColdDrinkImage
+    }     
+]
+
+export const hotBevarages = [
+    {
+        title: "Espresso",
+        description: "Short, strong and punchy.",
+        price: "$2",
+        image: CoffeeImage
+    },
+    {
+        title: "Cappucino",
+        description: "Like milk?",
+        price: "$3",
+        image: CoffeeImage
+    },
+    {
+        title: "Latte",
+        description: "Even more milk",
+        price: "$3",
+        image: CoffeeImage
+    }   
 ]
