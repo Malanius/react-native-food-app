@@ -10,7 +10,7 @@ import styles from './Styles/FoodScreenStyles'
 const foodScreen = (props) => (
 
     <Container>
-        <HeaderFood navigate={props.navigation} />
+        <HeaderFood navigation={props.navigation} />
         <Content style={styles.content}>
             <Text style={styles.title}>{props.navigation.getParam('title', '')}</Text>
             {props.navigation.getParam('items', []).map(item => (

@@ -18,7 +18,7 @@ const headerLanding = (props) => (
         <Text style={styles.title}>BBQ</Text>
       </Body>
       <Right>
-        <Button transparent onPress={() => alert("Checkout button pressed!")}>
+        <Button transparent onPress={() => props.navigation.navigate('CartScreen')}>
           <Icon type="FontAwesome5" name="shopping-cart" style={styles.icon} />
         </Button>
       </Right>

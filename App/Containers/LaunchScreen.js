@@ -82,7 +82,7 @@ export default class LaunchScreen extends Component {
       >
 
         <View style={styles.mainContainer}>
-          <HeaderLanding openDrawer={this.openDrawer} />
+          <HeaderLanding openDrawer={this.openDrawer} navigation={this.props.navigation} />
           <ScrollView style={styles.scroll}>
             <FoodGroup image={burgerImage} text="BURGERS" goTo={this.goToBurgers} />
             <FoodGroup image={chickenImage} text="CHICKEN" goTo={this.goToChicken} />

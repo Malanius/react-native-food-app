@@ -10,7 +10,7 @@ const headerFood = (props) => (
   <Container style={styles.container}>
     <Header style={styles.header}>
       <Left>
-        <Button transparent onPress={() => props.navigate.goBack()}>
+        <Button transparent onPress={() => props.navigation.goBack()}>
           <Icon name="md-arrow-back" style={styles.icon} />
         </Button>
       </Left>
@@ -18,7 +18,7 @@ const headerFood = (props) => (
         <Text style={styles.title}>BBQ</Text>
       </Body>
       <Right>
-        <Button transparent onPress={() => alert("Checkout button pressed!")}>
+        <Button transparent onPress={() => props.navigation.navigate('CartScreen')}>
           <Icon type="FontAwesome5" name="shopping-cart" style={styles.icon} />
         </Button>
       </Right>
