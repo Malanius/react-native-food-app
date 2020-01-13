@@ -5,8 +5,6 @@ import { View, Image, Text, TouchableOpacity } from 'react-native'
 // Styles
 import styles from './Styles/FoodItemStyles'
 
-const burger = require('../Images/food/burger.jpg')
-
 const foodItem = (props) => (
 
     <TouchableOpacity onPress={() => alert("Food item pressed.")}>
