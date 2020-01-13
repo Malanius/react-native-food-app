@@ -1,0 +1,24 @@
+import { StyleSheet } from 'react-native'
+import { ApplicationStyles } from '../../Themes'
+
+export default StyleSheet.create({
+   ...ApplicationStyles.screen,
+   parentView: {
+       height: '100%',
+       width: '100%'       
+   },
+   footerView: {
+       height: 200,
+       width: '100%',
+       backgroundColor: 'orange',
+       borderTopLeftRadius: 20,
+       borderTopRightRadius: 20
+   },
+   footerText: {
+       width: '100%',
+       textAlign: 'center',
+       color: 'white',
+       fontSize: 24,
+       marginTop: 5 
+   }
+})
