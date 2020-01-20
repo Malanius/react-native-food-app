@@ -27,13 +27,13 @@ const cartItem = (props) => (
         </View>
 
         <View style={styles.counterView}>
-          <Button transparent onPress={() => { alert('up') }}>
+          <Button transparent onPress={() => { props.increase(props.itemKey) }}>
             <Icon name="arrow-dropup" style={styles.counterIconUp} />
           </Button>
 
           <Text style={styles.itemCount}>{props.count}</Text>
 
-          <Button transparent onPress={() => { alert('down') }}>
+          <Button transparent onPress={() => { props.decrease(props.itemKey) }}>
             <Icon name="arrow-dropdown" style={styles.counterIconDown} />
           </Button>
         </View>

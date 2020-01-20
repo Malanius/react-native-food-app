@@ -20,6 +20,7 @@ class CartScreen extends Component {
     }
 
     render() {
+        let itemKey = 0;
         return (
             <View>
                 <HeaderFood navigation={this.props.navigation} />
@@ -27,10 +28,13 @@ class CartScreen extends Component {
                     <Content>
                         {this.props.cart && this.props.cart.length && this.props.cart.map((item) => (
                             <CartItem key={item.title}
-                                key={item.title}
+                                key={itemKey}
+                                itemKey={itemKey++}
                                 title={item.title}
                                 price={item.price}
-                                count={item.count} />
+                                count={item.count}
+                                increase={this.props.setItemcountup}
+                                decrease={this.props.setItemcountdown} />
                         )) ||
                             <Text style={styles.emptyText}>The cart is empty</Text>
                         }
