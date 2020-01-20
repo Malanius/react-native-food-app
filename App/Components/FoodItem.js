@@ -7,7 +7,13 @@ import styles from './Styles/FoodItemStyles'
 
 const foodItem = (props) => (
 
-    <TouchableOpacity onPress={() => props.navigation.navigate('FoodDetailScreen')}>
+    <TouchableOpacity onPress={() =>
+        props.navigation.navigate('FoodDetailScreen', {
+            image: props.image,
+            title: props.title,
+            price: props.price
+        })}>
+
         <View style={styles.foodItemView}>
             <View style={styles.price}>
                 <Text style={styles.priceText}>{props.price}</Text>
