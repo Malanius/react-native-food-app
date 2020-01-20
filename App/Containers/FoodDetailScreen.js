@@ -32,7 +32,7 @@ class FoodDetailScreen extends Component {
               <Text style={styles.nameText}>{title}</Text>
             </View>
             <View style={styles.price}>
-              <Text style={styles.priceText}>{price}</Text>
+              <Text style={styles.priceText}>${price}</Text>
             </View>
           </View>
 

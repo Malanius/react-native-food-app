@@ -16,7 +16,7 @@ const foodItem = (props) => (
 
         <View style={styles.foodItemView}>
             <View style={styles.price}>
-                <Text style={styles.priceText}>{props.price}</Text>
+                <Text style={styles.priceText}>${props.price}</Text>
             </View>
 
             <View style={styles.imageView}>

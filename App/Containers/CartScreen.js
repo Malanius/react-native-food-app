@@ -26,23 +26,25 @@ class CartScreen extends Component {
                 <HeaderFood navigation={this.props.navigation} />
                 <View style={styles.parentView}>
                     <Content>
-                        {this.props.cart && this.props.cart.length && this.props.cart.map((item) => (
-                            <CartItem key={item.title}
-                                key={itemKey}
-                                itemKey={itemKey++}
-                                title={item.title}
-                                price={item.price}
-                                count={item.count}
-                                increase={this.props.setItemcountup}
-                                decrease={this.props.setItemcountdown}
-                                delete={this.props.setRemoveItem} />
-                        )) ||
+                        {this.props.cart && this.props.cart.length && this.props.cart.map((item) => {
+                            return (
+                                <CartItem key={item.title}
+                                    key={itemKey}
+                                    itemKey={itemKey++}
+                                    title={item.title}
+                                    price={item.price}
+                                    count={item.count}
+                                    increase={this.props.setItemcountup}
+                                    decrease={this.props.setItemcountdown}
+                                    delete={this.props.setRemoveItem} />
+                            )
+                        }) ||
                             <Text style={styles.emptyText}>The cart is empty</Text>
                         }
                     </Content>
                     <View style={styles.footerView}>
                         <Text style={styles.footerText}>
-                            Total:
+                            Total: $
                         </Text>
                     </View>
                 </View>
