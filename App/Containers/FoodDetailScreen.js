@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Text, ImageBackground } from 'react-native'
-import { Container, View, Content } from 'native-base'
+import { Container, View, Content, Button, Icon } from 'native-base'
 
 import HeaderFood from '../Components/HeaderFood';
 
@@ -23,6 +23,13 @@ export default class FoodDetailScreen extends Component {
               <Text style={styles.priceText}>$333</Text>
             </View>
           </View>
+
+          <Button iconLeft dark style={styles.addButton}
+            onPress={() => { alert('Added') }}>
+            <Text style={styles.addText}></Text>
+            <Icon type="MaterialCommunityIcons" name="plus" style={styles.addIcon} />
+          </Button>
+          
         </Content >
       </Container >
 

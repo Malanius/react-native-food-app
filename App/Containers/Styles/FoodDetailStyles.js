@@ -42,5 +42,24 @@ export default StyleSheet.create({
         fontSize: 35,
         fontWeight: 'bold',
         marginTop: '50%'
+    },
+    addButton: {
+        backgroundColor: 'green',
+        marginLeft: '5%',
+        marginTop: 100,
+        height: 50,
+        width: '30%',
+        borderRadius: 20
+    },
+    addText: {
+        fontSize: 22,
+        paddingLeft: 25,
+        color: 'white',
+        fontWeight: '500'
+    },
+    addIcon: {
+        color: 'white',
+        fontSize: 30,
+        paddingRight: 10
     }
 })
