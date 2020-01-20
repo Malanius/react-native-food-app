@@ -12,7 +12,7 @@ const cartItem = (props) => (
 
       <View style={styles.standaloneRowBack}>
         <Text />
-        <Button danger onPress={() => alert('delete pressed')}>
+        <Button danger onPress={() => props.delete(props.itemKey)}>
           <Icon active name="trash" />
         </Button>
       </View>

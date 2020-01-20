@@ -34,7 +34,8 @@ class CartScreen extends Component {
                                 price={item.price}
                                 count={item.count}
                                 increase={this.props.setItemcountup}
-                                decrease={this.props.setItemcountdown} />
+                                decrease={this.props.setItemcountdown}
+                                delete={this.props.setRemoveItem} />
                         )) ||
                             <Text style={styles.emptyText}>The cart is empty</Text>
                         }
