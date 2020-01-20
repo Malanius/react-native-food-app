@@ -24,7 +24,22 @@ export const INITIAL_STATE = Immutable({
 
 export const changeCart = (state, { cart }) => {
   const cartArray = state.cart && state.cart.length ? [...state.cart] : []
-  cartArray.push(cart);
+  let updateIndex = -1;
+  for (var i = 0; i < cartArray.length; i++) {
+    if (cartArray[i].title === cart.title) {
+      updateIndex = i;
+      break;
+    }
+  }
+
+  if (updateIndex === -1) {
+    cartArray.push(cart);
+  } else {
+    cartArray[updateIndex] = {
+      ...cartArray[updateIndex],
+      count: parseInt(cartArray[updateIndex].count) + 1
+    }
+  }
   return state.merge({ cart: cartArray })
 }
 
