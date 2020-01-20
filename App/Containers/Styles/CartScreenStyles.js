@@ -20,5 +20,10 @@ export default StyleSheet.create({
         color: 'white',
         fontSize: 24,
         marginTop: 5
+    },
+    emptyText: {
+        textAlign: 'center',
+        marginTop: '50%',
+        fontStyle: 'italic'
     }
 })

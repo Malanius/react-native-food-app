@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { View } from 'react-native'
 import { Content, Text } from 'native-base'
-import { SwipeListView } from 'react-native-swipe-list-view';
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
+import CartActions from '../Redux/CartRedux'
 
 import HeaderFood from '../Components/HeaderFood'
 
@@ -9,36 +11,12 @@ import styles from './Styles/CartScreenStyles.js'
 import CartItem from '../Components/CartItem'
 
 
-export default class CartScreen extends Component {
+class CartScreen extends Component {
 
-    state = {
-        items: [
-            {
-                title: "Item 1",
-                price: "$10",
-                count: 1
-            },
-            {
-                title: "Item 2",
-                price: "$10",
-                count: 1
-            },
-            {
-                title: "Item 3",
-                price: "$10",
-                count: 1
-            },
-            {
-                title: "Item 4",
-                price: "$10",
-                count: 1
-            },
-            {
-                title: "Item 5",
-                price: "$10",
-                count: 1
-            }
-        ]
+    static propTypes = {
+        setItemcountup: PropTypes.func,
+        setItemcountdown: PropTypes.func,
+        setRemoveItem: PropTypes.func
     }
 
     render() {
@@ -47,12 +25,15 @@ export default class CartScreen extends Component {
                 <HeaderFood navigation={this.props.navigation} />
                 <View style={styles.parentView}>
                     <Content>
-                        {this.state.items.map((item) => (
+                        {this.props.cart && this.props.cart.length && this.props.cart.map((item) => (
                             <CartItem key={item.title}
+                                key={item.title}
                                 title={item.title}
                                 price={item.price}
                                 count={item.count} />
-                        ))}
+                        )) ||
+                            <Text style={styles.emptyText}>The cart is empty</Text>
+                        }
                     </Content>
                     <View style={styles.footerView}>
                         <Text style={styles.footerText}>
@@ -64,3 +45,19 @@ export default class CartScreen extends Component {
         )
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        cart: state.cart.cart
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        setItemcountup: (itemKey) => dispatch(CartActions.changeItemcountup(itemKey)),
+        setItemcountdown: (itemKey) => dispatch(CartActions.changeItemcountdown(itemKey)),
+        setRemoveItem: (itemKey) => dispatch(CartActions.changeRemoveitem(itemKey))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CartScreen);

@@ -32,7 +32,7 @@ export const changeItemcountup = (state, itemKey) => {
   const cartArray = state.cart && state.cart.length ? [...state.cart] : []
   cartArray[itemKey.cart] = {
     ...cartArray[itemKey.cart],
-    itemCount: parseInt(cartArray[itemKey.cart].itemCount) + 1
+    count: parseInt(cartArray[itemKey.cart].itemCount) + 1
   }
 
   return state.merge({ cart: cartArray });
@@ -44,12 +44,12 @@ export const changeItemcountdown = (state, itemKey) => {
   if (parseInt(cartArray[itemKey.cart].itemCount) > 1) {
     cartArray[itemKey.cart] = {
       ...cartArray[itemKey.cart],
-      itemCount: parseInt(cartArray[itemKey.cart].itemCount) - 1
+      count: parseInt(cartArray[itemKey.cart].itemCount) - 1
     }
   } else {
     cartArray[itemKey.cart] = {
       ...cartArray[itemKey.cart],
-      itemCount: 1
+      count: 1
     }
   }
 

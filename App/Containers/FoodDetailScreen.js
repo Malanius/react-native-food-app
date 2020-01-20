@@ -39,13 +39,12 @@ class FoodDetailScreen extends Component {
           <Button iconLeft dark style={styles.addButton}
             onPress={() => {
               this.props.setCart({
-                itemTitle: title,
-                itempPrice: price,
-                itemCount: 1,
-                itemImage: image,
-                itemExtras: null
+                title: title,
+                price: price,
+                count: 1,
+                image: image,
+                extras: null
               });
-              alert(JSON.stringify(this.props.cart));
             }}>
             <Text style={styles.addText}>ADD</Text>
             <Icon type="MaterialCommunityIcons" name="plus" style={styles.addIcon} />
