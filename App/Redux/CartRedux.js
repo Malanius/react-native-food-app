@@ -23,13 +23,13 @@ export const INITIAL_STATE = Immutable({
 /* ------------- Reducers ------------- */
 
 export const changeCart = (state, { cart }) => {
-  const cartArray = [...state.cart];
+  const cartArray = state.cart && state.cart.length ? [...state.cart] : []
   cartArray.push(cart);
   return state.merge({ cart: cartArray })
 }
 
 export const changeItemcountup = (state, itemKey) => {
-  const cartArray = [...state.cart];
+  const cartArray = state.cart && state.cart.length ? [...state.cart] : []
   cartArray[itemKey.cart] = {
     ...cartArray[itemKey.cart],
     itemCount: parseInt(cartArray[itemKey.cart].itemCount) + 1
@@ -39,7 +39,7 @@ export const changeItemcountup = (state, itemKey) => {
 }
 
 export const changeItemcountdown = (state, itemKey) => {
-  const cartArray = [...state.cart];
+  const cartArray = state.cart && state.cart.length ? [...state.cart] : []
 
   if (parseInt(cartArray[itemKey.cart].itemCount) > 1) {
     cartArray[itemKey.cart] = {
@@ -62,7 +62,7 @@ export const changeClearcart = (state) => {
 }
 
 export const changeRemoveitem = (state, itemKey) => {
-  let cartArray = [...state.cart];
+  const cartArray = state.cart && state.cart.length ? [...state.cart] : []
   cartArray.splice(itemKey.cart, 1);
   return state.merge({ cart: cartArray });
 }
