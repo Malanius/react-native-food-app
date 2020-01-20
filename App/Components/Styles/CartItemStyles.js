@@ -62,6 +62,10 @@ export default StyleSheet.create({
         fontSize: Platform.OS === 'ios' ? 30 : 50,
         color: 'red'
     },
+    counterIconDownDisabled: {
+        fontSize: Platform.OS === 'ios' ? 30 : 50,
+        color: 'gray'
+    },
     itemCount: {
         fontSize: 18,
         fontWeight: 'bold'

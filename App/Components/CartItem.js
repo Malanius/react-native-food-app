@@ -34,7 +34,10 @@ const cartItem = (props) => (
           <Text style={styles.itemCount}>{props.count}</Text>
 
           <Button transparent onPress={() => { props.decrease(props.itemKey) }}>
-            <Icon name="arrow-dropdown" style={styles.counterIconDown} />
+            {props.count == 1
+              ? <Icon name="arrow-dropdown" style={styles.counterIconDownDisabled} />
+              : <Icon name="arrow-dropdown" style={styles.counterIconDown} />
+            }
           </Button>
         </View>
       </View>
