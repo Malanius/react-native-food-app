@@ -1,12 +1,19 @@
 import React, { Component } from 'react'
 import { Text, ImageBackground } from 'react-native'
 import { Container, View, Content, Button, Icon } from 'native-base'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
+import CartActions from '../Redux/CartRedux'
 
 import HeaderFood from '../Components/HeaderFood';
 
 import styles from './Styles/FoodDetailStyles';
 
-export default class FoodDetailScreen extends Component {
+class FoodDetailScreen extends Component {
+
+  static propTypes = {
+    setCart: PropTypes.func
+  }
 
   render() {
 
@@ -30,7 +37,16 @@ export default class FoodDetailScreen extends Component {
           </View>
 
           <Button iconLeft dark style={styles.addButton}
-            onPress={() => { alert('Added') }}>
+            onPress={() => {
+              this.props.setCart({
+                itemTitle: title,
+                itempPrice: price,
+                itemCount: 1,
+                itemImage: image,
+                itemExtras: null
+              });
+              alert(JSON.stringify(this.props.cart));
+            }}>
             <Text style={styles.addText}>ADD</Text>
             <Icon type="MaterialCommunityIcons" name="plus" style={styles.addIcon} />
           </Button>
@@ -41,3 +57,17 @@ export default class FoodDetailScreen extends Component {
     )
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    cart: state.cart.cart
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setCart: (cart) => dispatch(CartActions.changeCart(cart))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(FoodDetailScreen);
