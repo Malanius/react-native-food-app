@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { View, Image, Text, TouchableOpacity } from 'react-native'
 
 
@@ -7,7 +7,7 @@ import styles from './Styles/FoodItemStyles'
 
 const foodItem = (props) => (
 
-    <TouchableOpacity onPress={() => alert("Food item pressed.")}>
+    <TouchableOpacity onPress={() => props.navigation.navigate('FoodDetailScreen')}>
         <View style={styles.foodItemView}>
             <View style={styles.price}>
                 <Text style={styles.priceText}>{props.price}</Text>

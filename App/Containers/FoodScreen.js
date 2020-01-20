@@ -20,6 +20,7 @@ const foodScreen = (props) => (
                     title={item.title}
                     description={item.description}
                     image={item.image}
+                    navigation={props.navigation}
                 />
             ))}
         </Content>
