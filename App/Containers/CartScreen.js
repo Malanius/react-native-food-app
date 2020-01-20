@@ -21,12 +21,14 @@ class CartScreen extends Component {
 
     render() {
         let itemKey = 0;
+        let total = 0;
         return (
             <View>
                 <HeaderFood navigation={this.props.navigation} />
                 <View style={styles.parentView}>
                     <Content>
                         {this.props.cart && this.props.cart.length && this.props.cart.map((item) => {
+                            total += item.price * item.count
                             return (
                                 <CartItem key={item.title}
                                     key={itemKey}
@@ -44,7 +46,7 @@ class CartScreen extends Component {
                     </Content>
                     <View style={styles.footerView}>
                         <Text style={styles.footerText}>
-                            Total: $
+                            Total: ${total}
                         </Text>
                     </View>
                 </View>
