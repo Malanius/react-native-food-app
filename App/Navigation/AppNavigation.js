@@ -4,6 +4,7 @@ import LaunchScreen from '../Containers/LaunchScreen'
 import FoodScreen from '../Containers/FoodScreen'
 import CartScreen from '../Containers/CartScreen'
 import FoodDetailScreen from '../Containers/FoodDetailScreen'
+import CheckoutScreen from '../Containers/CheckoutScreen'
 
 import styles from './Styles/NavigationStyles'
 
@@ -12,7 +13,8 @@ const PrimaryNav = createStackNavigator({
   LaunchScreen: { screen: LaunchScreen },
   FoodScreen: {screen: FoodScreen},
   CartScreen: {screen : CartScreen},
-  FoodDetailScreen: {screen: FoodDetailScreen}
+  FoodDetailScreen: {screen: FoodDetailScreen},
+  CheckoutScreen: {screen: CheckoutScreen}
 }, {
   // Default config for all screens
   headerMode: 'none',
