@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View } from 'react-native'
+import { View, TouchableOpacity } from 'react-native'
 import { Content, Text } from 'native-base'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
@@ -48,6 +48,14 @@ class CartScreen extends Component {
                         <Text style={styles.footerText}>
                             Total: ${total}
                         </Text>
+                        <TouchableOpacity style={styles.checkoutButton}
+                            onPress={() => {
+                                this.props.navigation.navigate('CheckoutScreen', {
+                                    price: total
+                                })
+                            }}>
+                            <Text style={styles.footerText}>Checkout</Text>
+                        </TouchableOpacity>
                     </View>
                 </View>
             </View>

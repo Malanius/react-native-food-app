@@ -14,7 +14,10 @@ export default class CheckoutScreen extends Component {
                 <HeaderFood navigation={this.props.navigation} />
                 <Content style={styles.checkoutContent}>
                     <Text style={styles.title}>Please enter yout info</Text>
-                    <CheckoutForm navigation={this.props.navigation} />
+                    <CheckoutForm
+                        navigation={this.props.navigation}
+                        price={this.props.navigation.getParam('price', null)}
+                    />
                 </Content>
             </Container>
         )

@@ -25,5 +25,13 @@ export default StyleSheet.create({
         textAlign: 'center',
         marginTop: '50%',
         fontStyle: 'italic'
+    },
+    checkoutButton: {
+        width: '50%',
+        marginLeft: '25%',
+        marginTop: 5,
+        height: 40,
+        borderRadius: 25,
+        backgroundColor: 'green'
     }
 })

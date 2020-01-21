@@ -5,6 +5,8 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import CartActions from '../Redux/CartRedux'
 
+import OrderService from '../Services/OrderService';
+
 import styles from './Styles/CheckoutFormStyles'
 
 class CheckoutForm extends Component {
@@ -18,13 +20,20 @@ class CheckoutForm extends Component {
         address: '',
         phone: '',
         note: '',
-        price: this.props.totalPrice,
+        price: this.props.price,
         cart: this.props.cart
     }
 
     submit = () => {
         if (this.state.name && this.state.address && this.state.phone) {
-            //Send to backend DB
+            OrderService.addOrder(
+                this.state.name,
+                this.state.address,
+                this.state.phone,
+                this.state.note,
+                this.state.price,
+                this.state.cart
+            );
             alert('Ordered');
             this.props.setClearcart();
             this.props.navigation.navigate('LaunchScreen');
