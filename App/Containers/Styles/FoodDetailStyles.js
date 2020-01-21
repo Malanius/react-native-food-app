@@ -48,7 +48,7 @@ export default StyleSheet.create({
         marginLeft: '5%',
         marginTop: 100,
         height: 50,
-        width: '30%',
+        width: '35%',
         borderRadius: 20
     },
     addText: {
