@@ -73,7 +73,7 @@
     "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.57.0",
     "mockery": "2.1.0",
-    "react-devtools-core": "3.6.3",
+    "react-devtools-core": "4.28.4",
     "react-dom": "16.8.6",
     "react-test-renderer": "16.8.3",
     "reactotron-react-native": "2.2.0",
